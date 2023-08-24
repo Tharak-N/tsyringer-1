@@ -36,7 +36,7 @@ container.register('FACT', {
   useFactory: (dependency: DependencyContainer) => {
     console.log('dep', dependency);
     let isRegistered = dependency.isRegistered('EMPLOYEE');
-    console.log('uis registeres', isRegistered);
+    console.log('is registered', isRegistered);
     if (isRegistered) {
       console.log('inside if');
       container.resolve('EMPLOYEE').logResolvedInstance();
